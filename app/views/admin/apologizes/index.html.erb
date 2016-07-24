@@ -17,7 +17,7 @@
       <tr>
         <td><%= apologize.apologize_image %></td>
         <td><%= apologize.description %></td>
-        <td><%= apologize.person_id %></td>
+        <td><%= apologize.person.try(:name) %></td>
         <td><%= link_to 'Show', [:admin, apologize] %></td>
         <td><%= link_to 'Edit', edit_admin_apologize_path(apologize) %></td>
         <td><%= link_to 'Destroy', [:admin, apologize], method: :delete, data: { confirm: 'Are you sure?' } %></td>

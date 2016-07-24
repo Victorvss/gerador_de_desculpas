@@ -1,5 +1,6 @@
 class Admin::ApologizesController < ApplicationController
   before_action :set_apologize, only: [:show, :edit, :update, :destroy]
+  before_action :set_people, only: [:new, :edit]
 
   def index
     @apologizes = Apologize.all
@@ -30,7 +31,6 @@ class Admin::ApologizesController < ApplicationController
 
       if @apologize.update(apologize_params)
         redirect_to [:admin, @apologize], notice: 'Desculpas atualizdas com sucesso.'
-
       else
         format.html { render :edit }
       end
@@ -46,6 +46,10 @@ class Admin::ApologizesController < ApplicationController
 
     def set_apologize
       @apologize = Apologize.find(params[:id])
+    end
+
+    def set_people
+      @people = Person.all.collect{|people| [people.name, people.id]}
     end
 
     def apologize_params
