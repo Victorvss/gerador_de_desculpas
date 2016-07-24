@@ -7,9 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
   <div class="container">
-<%= yield %>
+    <% unless current_page?(home_index_path) %>
+    <ul class="nav nav-pills">
+      <li role="presentation" ><%= link_to "Desculpas", admin_apologizes_path %></li>
+      <li role="presentation"><%= link_to "Autores", admin_people_path %></li>
+    </ul>
+    <% end %>
+    <%= yield %>
   </div>
 
 </body>

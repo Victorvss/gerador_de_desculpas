@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Apologizes</h1>
+<h1>Qualquer Desculpa</h1>
+<div data-toggle="tooltip" title="Cadastrar Desculpas">
+  <%= link_to '+ Desculpas', new_admin_apologize_path, class: "btn btn-primary pull-right" %>
+</div>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Apologize image</th>
-      <th>Description</th>
-      <th>Person</th>
+      <th>Imagem</th>
+      <th>Desculpa</th>
+      <th>Autor</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,14 +21,16 @@
         <td><%= image_tag(apologize.apologize_image, size: "200x150") %></td>
         <td><%= apologize.description %></td>
         <td><%= apologize.person.try(:name) %></td>
-        <td><%= link_to 'Show', [:admin, apologize] %></td>
-        <td><%= link_to 'Edit', edit_admin_apologize_path(apologize) %></td>
-        <td><%= link_to 'Destroy', [:admin, apologize], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td>
+            <div class="btn-group" role="group" aria-label="...">
+            <%= link_to 'Mostrar', [:admin, apologize], class: "btn btn-info btn-xs" %>
+              <%= link_to 'Editar', edit_admin_apologize_path(apologize), class: "btn btn-info btn-xs"%>
+              <%= link_to 'Deletar', [:admin, apologize], class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Apologize', new_admin_apologize_path, class: "btn btn-primary" %>
