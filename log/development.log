@@ -1,0 +1,1248 @@
+
+
+Started GET "/persons" for 127.0.0.1 at 2016-07-24 08:48:31 -0300
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.6ms)
+  [1m[36m (76.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (65.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePeople (20160724114747)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160724114747"]]
+  [1m[35m (71.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/persons" for 127.0.0.1 at 2016-07-24 08:49:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/persons"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.4ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2016-07-24 08:50:28 -0300
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1502ms (Views: 1499.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 08:50:30 -0300
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 08:56:25 -0300
+
+LoadError (Unable to autoload constant Admin::PeopleController, expected /home/aluno125/Documentos/gerador_de_desculpas/app/controllers/admin/people_controller.rb to define it):
+  activesupport (4.2.6) lib/active_support/dependencies.rb:495:in `load_missing_constant'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:263:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:263:in `block in constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.0ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 08:58:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+TypeError (Admin is not a class):
+  app/controllers/admin/people_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.0ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 08:59:01 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered admin/people/index.html.erb within layouts/application (30.5ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `new_person_path' for #<#<Class:0x0055712e17c998>:0x0055712e169780>
+Did you mean?  new_admin_person_path):
+    24: 
+    25: <br>
+    26: 
+    27: <%= link_to 'New Person', new_person_path %>
+  app/views/admin/people/index.html.erb:27:in `_app_views_admin_people_index_html_erb___4290698217818557968_46972296428620'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.4ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:00:46 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered admin/people/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 263ms (Views: 261.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:00:46 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:00:46 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:00:46 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:00:46 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:00:46 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:00:46 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:00:46 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:00:46 -0300
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:01:00 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (26.4ms)
+  Rendered admin/people/new.html.erb within layouts/application (27.9ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `people_path' for #<#<Class:0x0055712e17c998>:0x0055712decc360>):
+    1: <%= form_for(@person) do |f| %>
+    2:   <% if @person.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+  app/views/admin/people/_form.html.erb:1:in `_app_views_admin_people__form_html_erb___169858664849113131_46972294185200'
+  app/views/admin/people/new.html.erb:3:in `_app_views_admin_people_new_html_erb___1903595707216183228_46972294948300'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.6ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:04:47 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (1.2ms)
+  Rendered admin/people/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/aluno125/Documentos/gerador_de_desculpas/app/views/admin/people/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...m_for[:admin, @admin_person] do |f| @output_buffer.safe_appe...
+...                               ^
+/home/aluno125/Documentos/gerador_de_desculpas/app/views/admin/people/_form.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/admin/people/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/admin/people/_form.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/admin/people/new.html.erb:3:in `_app_views_admin_people_new_html_erb___1903595707216183228_46972294948300'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.7ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:07:27 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (3.1ms)
+  Rendered admin/people/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for [:admin, @admin_person] do |f| %>
+    2:   <% if @person.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+  app/views/admin/people/_form.html.erb:1:in `_app_views_admin_people__form_html_erb___169858664849113131_70074289455280'
+  app/views/admin/people/new.html.erb:3:in `_app_views_admin_people_new_html_erb___1903595707216183228_46972294948300'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.0ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:07:37 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (1.6ms)
+  Rendered admin/people/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/aluno125/Documentos/gerador_de_desculpas/app/views/admin/people/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...m_for[:admin, @admin_person] do |f| @output_buffer.safe_appe...
+...                               ^
+/home/aluno125/Documentos/gerador_de_desculpas/app/views/admin/people/_form.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/admin/people/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/admin/people/_form.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/admin/people/new.html.erb:3:in `_app_views_admin_people_new_html_erb___1903595707216183228_46972294948300'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.7ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:08:56 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (1.2ms)
+  Rendered admin/people/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/home/aluno125/Documentos/gerador_de_desculpas/app/views/admin/people/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...m_for[:admin, @admin_person] do |f| @output_buffer.safe_appe...
+...                               ^
+/home/aluno125/Documentos/gerador_de_desculpas/app/views/admin/people/_form.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/admin/people/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/admin/people/_form.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/admin/people/new.html.erb:3:in `_app_views_admin_people_new_html_erb___1903595707216183228_46972294948300'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.1ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:09:13 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (0.9ms)
+  Rendered admin/people/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/home/aluno125/Documentos/gerador_de_desculpas/app/views/admin/people/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...m_for[:admin, @admin_person] do |f| @output_buffer.safe_appe...
+...                               ^
+/home/aluno125/Documentos/gerador_de_desculpas/app/views/admin/people/_form.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/admin/people/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/admin/people/_form.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/admin/people/new.html.erb:3:in `_app_views_admin_people_new_html_erb___1903595707216183228_46972294948300'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.1ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:10:49 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (4.6ms)
+  Rendered admin/people/new.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for([:admin, @admin_person]) do |f| %>
+    2:   <% if @person.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+  app/views/admin/people/_form.html.erb:1:in `_app_views_admin_people__form_html_erb___169858664849113131_46972294693360'
+  app/views/admin/people/new.html.erb:3:in `_app_views_admin_people_new_html_erb___1903595707216183228_46972294948300'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.4ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:11:16 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (2.4ms)
+  Rendered admin/people/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for ([:admin, @admin_person]) do |f| %>
+    2:   <% if @person.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+  app/views/admin/people/_form.html.erb:1:in `_app_views_admin_people__form_html_erb___169858664849113131_70074284971140'
+  app/views/admin/people/new.html.erb:3:in `_app_views_admin_people_new_html_erb___1903595707216183228_46972294948300'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.6ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:11:41 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (25.0ms)
+  Rendered admin/people/new.html.erb within layouts/application (54.2ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `people_path' for #<#<Class:0x0055712deaaad0>:0x007f76e24350c0>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Back', people_path %>
+  app/views/admin/people/new.html.erb:5:in `_app_views_admin_people_new_html_erb___1903595707216183228_46972294948300'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.7ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:12:29 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (3.1ms)
+  Rendered admin/people/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:12:29 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:12:29 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:12:29 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:12:29 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:12:29 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:12:29 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:12:29 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:12:29 -0300
+
+
+Started POST "/admin/people" for 127.0.0.1 at 2016-07-24 09:12:40 -0300
+Processing by Admin::PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hhukcCVNlrj0uXc/Jmff14B7yVd6AsvW32UplMmP392ppa1DwdFquaZcy+s21UZPH7lXZvRmG7lOGUAu4eFvWg==", "person"=>{"name"=>"Victor"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Victor"], ["created_at", "2016-07-24 12:12:40.771177"], ["updated_at", "2016-07-24 12:12:40.771177"]]
+  [1m[35m (103.9ms)[0m  commit transaction
+Redirected to 
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 104.5ms)
+
+NoMethodError (undefined method `person_url' for #<Admin::PeopleController:0x007f76e24f5398>
+Did you mean?  person_params):
+  app/controllers/admin/people_controller.rb:31:in `block (2 levels) in create'
+  app/controllers/admin/people_controller.rb:29:in `create'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (42.6ms)
+
+
+Started POST "/admin/people" for 127.0.0.1 at 2016-07-24 09:13:32 -0300
+Processing by Admin::PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hhukcCVNlrj0uXc/Jmff14B7yVd6AsvW32UplMmP392ppa1DwdFquaZcy+s21UZPH7lXZvRmG7lOGUAu4eFvWg==", "person"=>{"name"=>"Victor"}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Victor"], ["created_at", "2016-07-24 12:13:32.949262"], ["updated_at", "2016-07-24 12:13:32.949262"]]
+  [1m[36m (50.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/people/2
+Completed 302 Found in 60ms (ActiveRecord: 51.0ms)
+
+
+Started GET "/admin/people/2" for 127.0.0.1 at 2016-07-24 09:13:33 -0300
+Processing by Admin::PeopleController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admin/people/show.html.erb within layouts/application (27.4ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `edit_person_path' for #<#<Class:0x007f76e2b5c308>:0x007f76e2b3bae0>
+Did you mean?  edit_admin_person_path):
+    5:   <%= @person.name %>
+    6: </p>
+    7: 
+    8: <%= link_to 'Edit', edit_person_path(@person) %> |
+    9: <%= link_to 'Back', people_path %>
+  app/views/admin/people/show.html.erb:8:in `_app_views_admin_people_show_html_erb___2764295412443349266_70074293146540'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.0ms)
+
+
+Started GET "/admin/people/2" for 127.0.0.1 at 2016-07-24 09:14:53 -0300
+Processing by Admin::PeopleController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered admin/people/show.html.erb within layouts/application (34.8ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `people_path' for #<#<Class:0x007f76e2b5c308>:0x0055712df28868>):
+    6: </p>
+    7: 
+    8: <%= link_to 'Edit', edit_admin_person_path(@person) %> |
+    9: <%= link_to 'Back', people_path %>
+  app/views/admin/people/show.html.erb:9:in `_app_views_admin_people_show_html_erb___2764295412443349266_46972299842680'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.5ms)
+
+
+Started GET "/admin/people/2" for 127.0.0.1 at 2016-07-24 09:15:04 -0300
+Processing by Admin::PeopleController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admin/people/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:15:04 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:15:04 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:15:04 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:15:04 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:15:04 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:15:04 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:15:04 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:15:04 -0300
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:15:06 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered admin/people/index.html.erb within layouts/application (27.9ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `person_path' for #<#<Class:0x007f76e2b5c308>:0x007f76e182bbf8>):
+    14:     <% @people.each do |person| %>
+    15:       <tr>
+    16:         <td><%= person.name %></td>
+    17:         <td><%= link_to 'Show', person %></td>
+    18:         <td><%= link_to 'Edit', edit_person_path(person) %></td>
+    19:         <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    20:       </tr>
+  app/views/admin/people/index.html.erb:17:in `block in _app_views_admin_people_index_html_erb___4290698217818557968_46972294986960'
+  app/views/admin/people/index.html.erb:14:in `_app_views_admin_people_index_html_erb___4290698217818557968_46972294986960'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.9ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:15:46 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people"
+  Rendered admin/people/index.html.erb within layouts/application (35.2ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `admin_person' for #<#<Class:0x007f76e2b5c308>:0x007f76e23940a8>
+Did you mean?  admin_person_url):
+    14:     <% @people.each do |person| %>
+    15:       <tr>
+    16:         <td><%= person.name %></td>
+    17:         <td><%= link_to 'Show', admin_person %></td>
+    18:         <td><%= link_to 'Edit', edit_person_path(person) %></td>
+    19:         <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    20:       </tr>
+  app/views/admin/people/index.html.erb:17:in `block in _app_views_admin_people_index_html_erb___4290698217818557968_70074289124880'
+  app/views/admin/people/index.html.erb:14:in `_app_views_admin_people_index_html_erb___4290698217818557968_70074289124880'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.4ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:16:10 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered admin/people/index.html.erb within layouts/application (29.4ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `edit_person_path' for #<#<Class:0x007f76e2b5c308>:0x007f76e2710f38>
+Did you mean?  edit_admin_person_path):
+    15:       <tr>
+    16:         <td><%= person.name %></td>
+    17:         <td><%= link_to 'Show', [:admin, person] %></td>
+    18:         <td><%= link_to 'Edit', edit_person_path(person) %></td>
+    19:         <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    20:       </tr>
+    21:     <% end %>
+  app/views/admin/people/index.html.erb:18:in `block in _app_views_admin_people_index_html_erb___4290698217818557968_70074290961800'
+  app/views/admin/people/index.html.erb:14:in `_app_views_admin_people_index_html_erb___4290698217818557968_70074290961800'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.4ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:16:25 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people"
+  Rendered admin/people/index.html.erb within layouts/application (26.8ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `person_path' for #<#<Class:0x007f76e2b5c308>:0x007f76e265e1a8>):
+    16:         <td><%= person.name %></td>
+    17:         <td><%= link_to 'Show', [:admin, person] %></td>
+    18:         <td><%= link_to 'Edit', edit_admin_person_path(person) %></td>
+    19:         <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    20:       </tr>
+    21:     <% end %>
+    22:   </tbody>
+  app/views/admin/people/index.html.erb:19:in `block in _app_views_admin_people_index_html_erb___4290698217818557968_70074290595620'
+  app/views/admin/people/index.html.erb:14:in `_app_views_admin_people_index_html_erb___4290698217818557968_70074290595620'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.0ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:16:42 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered admin/people/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/people/1/edit" for 127.0.0.1 at 2016-07-24 09:16:45 -0300
+Processing by Admin::PeopleController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered admin/people/_form.html.erb (1.7ms)
+  Rendered admin/people/edit.html.erb within layouts/application (38.8ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `person_path' for #<#<Class:0x007f76e2b5c308>:0x0055712bcff9f8>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Show', @person %> |
+    6: <%= link_to 'Back', people_path %>
+  app/views/admin/people/edit.html.erb:5:in `_app_views_admin_people_edit_html_erb__2079550386562073639_46972276872220'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.0ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:16:49 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (1.2ms)
+  Rendered admin/people/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/people" for 127.0.0.1 at 2016-07-24 09:16:54 -0300
+Processing by Admin::PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzDak6N69cW1CwkFs6ICTPzEroLWuiOKPIvVMPqfTwo8jtOgR+YJxOfutdGjEJvUYwYws1je8+Wt97yK0vH/jQ==", "person"=>{"name"=>"Ricardo"}, "commit"=>"Create Person"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Ricardo"], ["created_at", "2016-07-24 12:16:54.870665"], ["updated_at", "2016-07-24 12:16:54.870665"]]
+  [1m[36m (122.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/people/3
+Completed 302 Found in 126ms (ActiveRecord: 123.0ms)
+
+
+Started GET "/admin/people/3" for 127.0.0.1 at 2016-07-24 09:16:55 -0300
+Processing by Admin::PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered admin/people/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/people/3/edit" for 127.0.0.1 at 2016-07-24 09:16:58 -0300
+Processing by Admin::PeopleController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered admin/people/_form.html.erb (1.4ms)
+  Rendered admin/people/edit.html.erb within layouts/application (26.6ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `person_path' for #<#<Class:0x007f76e2b5c308>:0x0055712de57470>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Show', @person %> |
+    6: <%= link_to 'Back', people_path %>
+  app/views/admin/people/edit.html.erb:5:in `_app_views_admin_people_edit_html_erb__2079550386562073639_46972276872220'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.5ms)
+
+
+Started GET "/admin/people/3/edit" for 127.0.0.1 at 2016-07-24 09:17:33 -0300
+Processing by Admin::PeopleController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered admin/people/_form.html.erb (1.8ms)
+  Rendered admin/people/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/admin/people/3" for 127.0.0.1 at 2016-07-24 09:17:39 -0300
+Processing by Admin::PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxcM+84PX5obWpNjZZKW9Z1s2e1Ny+nOmEIdUTZRey7kqQXIKpOjm0m/L7d1IA9tAq5H3MOvOaEJPnTrHj/LqQ==", "person"=>{"name"=>"Ricardo s"}, "commit"=>"Update Person", "id"=>"3"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "people" SET "name" = ?, "updated_at" = ? WHERE "people"."id" = ?[0m  [["name", "Ricardo s"], ["updated_at", "2016-07-24 12:17:39.022907"], ["id", 3]]
+  [1m[35m (125.9ms)[0m  commit transaction
+Redirected to 
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 126.3ms)
+
+NoMethodError (undefined method `person_url' for #<Admin::PeopleController:0x007f76e16b65e8>
+Did you mean?  person_params):
+  app/controllers/admin/people_controller.rb:45:in `block (2 levels) in update'
+  app/controllers/admin/people_controller.rb:43:in `update'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.2ms)
+
+
+Started PATCH "/admin/people/3" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+Processing by Admin::PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxcM+84PX5obWpNjZZKW9Z1s2e1Ny+nOmEIdUTZRey7kqQXIKpOjm0m/L7d1IA9tAq5H3MOvOaEJPnTrHj/LqQ==", "person"=>{"name"=>"Ricardo s"}, "commit"=>"Update Person", "id"=>"3"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/people/3
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/people/3" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+Processing by Admin::PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered admin/people/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:18:05 -0300
+
+
+Started GET "/admin/people/3/edit" for 127.0.0.1 at 2016-07-24 09:18:07 -0300
+Processing by Admin::PeopleController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered admin/people/_form.html.erb (1.9ms)
+  Rendered admin/people/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/admin/people/3" for 127.0.0.1 at 2016-07-24 09:18:12 -0300
+Processing by Admin::PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R9ZQJ/iOGs3eb1ciTAD0oyk4cH3ZzA/hnZr4C/81bJVoaFkUHBLmzIyK6/Zcsm07tvruTFeo344M5pGx11vcEg==", "person"=>{"name"=>"Ricardo b"}, "commit"=>"Update Person", "id"=>"3"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "people" SET "name" = ?, "updated_at" = ? WHERE "people"."id" = ?  [["name", "Ricardo b"], ["updated_at", "2016-07-24 12:18:12.054952"], ["id", 3]]
+  [1m[36m (99.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/people/3
+Completed 302 Found in 104ms (ActiveRecord: 99.6ms)
+
+
+Started GET "/admin/people/3" for 127.0.0.1 at 2016-07-24 09:18:12 -0300
+Processing by Admin::PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered admin/people/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:18:13 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered admin/people/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admin/people/1" for 127.0.0.1 at 2016-07-24 09:20:52 -0300
+Processing by Admin::PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oa9kAQzIOtG9NVVkq/C6CZO6yUj63m0FmWBp/VUsKxaOEW0y6FTG0O/Q6bC7QiORDHhXeXS6vWoIHABHfUKbkQ==", "id"=>"1"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "people" WHERE "people"."id" = ?  [["id", 1]]
+  [1m[36m (49.9ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 50.3ms)
+
+NameError (undefined local variable or method `people_url' for #<Admin::PeopleController:0x007f76e26a64f8>):
+  app/controllers/admin/people_controller.rb:59:in `block (2 levels) in destroy'
+  app/controllers/admin/people_controller.rb:58:in `destroy'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.5ms)
+
+
+Started DELETE "/admin/people/1" for 127.0.0.1 at 2016-07-24 09:21:39 -0300
+Processing by Admin::PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oa9kAQzIOtG9NVVkq/C6CZO6yUj63m0FmWBp/VUsKxaOEW0y6FTG0O/Q6bC7QiORDHhXeXS6vWoIHABHfUKbkQ==", "id"=>"1"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=1):
+  app/controllers/admin/people_controller.rb:67:in `set_person'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.5ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:21:59 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered admin/people/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admin/people/3" for 127.0.0.1 at 2016-07-24 09:22:02 -0300
+Processing by Admin::PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CJRxVHljfhUweKpdQ2bGwB5Nt0/jqLAZGd6aWfI7TfcnKnhnnf+CFGKdFolT1F9YgY8pfm3MYHaIovPj2lX9cA==", "id"=>"3"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "people" WHERE "people"."id" = ?  [["id", 3]]
+  [1m[36m (77.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/people
+Completed 302 Found in 81ms (ActiveRecord: 78.0ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:22:02 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered admin/people/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:27:00 -0300
+
+SyntaxError (/home/aluno125/Documentos/gerador_de_desculpas/app/controllers/admin/people_controller.rb:30: syntax error, unexpected '|'):
+  app/controllers/admin/people_controller.rb:30: syntax error, unexpected '|'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.5ms)
+
+
+Started GET "/admin/people/new" for 127.0.0.1 at 2016-07-24 09:27:15 -0300
+Processing by Admin::PeopleController#new as HTML
+  Rendered admin/people/_form.html.erb (1.5ms)
+  Rendered admin/people/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 33ms (Views: 27.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:27:15 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:27:15 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:27:15 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:27:15 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:27:15 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:27:15 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:27:15 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:27:15 -0300
+
+
+Started POST "/admin/people" for 127.0.0.1 at 2016-07-24 09:27:20 -0300
+Processing by Admin::PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"muqXpyC7leThRtU9EXt6DQtu8Iy23KIoouq9d5+UZ9K1VJ6UxCdp5bOjaekByeOVlKxuvTi4ckczltTNt/rXVQ==", "person"=>{"name"=>"haha"}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "haha"], ["created_at", "2016-07-24 12:27:20.436715"], ["updated_at", "2016-07-24 12:27:20.436715"]]
+  [1m[36m (118.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/people/4
+Completed 302 Found in 122ms (ActiveRecord: 118.5ms)
+
+
+Started GET "/admin/people/4" for 127.0.0.1 at 2016-07-24 09:27:20 -0300
+Processing by Admin::PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered admin/people/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/people/4/edit" for 127.0.0.1 at 2016-07-24 09:27:22 -0300
+Processing by Admin::PeopleController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered admin/people/_form.html.erb (2.2ms)
+  Rendered admin/people/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/admin/people/4" for 127.0.0.1 at 2016-07-24 09:27:25 -0300
+Processing by Admin::PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JORFHX3a0YmpbWGyaxHqiu7/mADB4pZ5ygd4QV8GQbsLWkwumUYtiPuI3WZ7o3MScT0GMU+GRhZbexH7d2jxPA==", "person"=>{"name"=>"haha1"}, "commit"=>"Update Person", "id"=>"4"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "people" SET "name" = ?, "updated_at" = ? WHERE "people"."id" = ?  [["name", "haha1"], ["updated_at", "2016-07-24 12:27:25.416450"], ["id", 4]]
+  [1m[36m (127.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/people/4
+Completed 302 Found in 132ms (ActiveRecord: 128.2ms)
+
+
+Started GET "/admin/people/4" for 127.0.0.1 at 2016-07-24 09:27:25 -0300
+Processing by Admin::PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered admin/people/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:27:26 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered admin/people/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admin/people/4" for 127.0.0.1 at 2016-07-24 09:30:34 -0300
+Processing by Admin::PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"a2j2/gw6Pnv1+Io6dsqsWdFcGNWHVexFpdd5ZkkeSW5E1v/N6KbCeqcdNu5meDXBTp6G5AkxPCo0qxDcYXD56Q==", "id"=>"4"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "people" WHERE "people"."id" = ?  [["id", 4]]
+  [1m[36m (76.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/people
+Completed 302 Found in 80ms (ActiveRecord: 77.0ms)
+
+
+Started GET "/admin/people" for 127.0.0.1 at 2016-07-24 09:30:34 -0300
+Processing by Admin::PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people"
+  Rendered admin/people/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
