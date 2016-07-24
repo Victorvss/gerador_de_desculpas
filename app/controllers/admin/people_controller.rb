@@ -18,7 +18,6 @@ class Admin::PeopleController < ApplicationController
   def create
     @person = Person.new(person_params)
 
-
       if @person.save
         redirect_to [:admin,@person], notice: 'Perfil criado com sucesso.'
       else

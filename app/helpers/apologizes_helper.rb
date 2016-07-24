@@ -1,0 +1,2 @@
+module ApologizesHelper
+end

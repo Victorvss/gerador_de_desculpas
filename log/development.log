@@ -1246,3 +1246,1254 @@ Processing by Admin::PeopleController#index as HTML
   [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people"
   Rendered admin/people/index.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateApologizes (20160724123546)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "apologizes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "apologize_image" varchar, "description" varchar, "person_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_apologizes_on_person_id" ON "apologizes" ("person_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160724123546"]]
+  [1m[36m (72.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_apologizes_on_person_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_apologizes_on_person_id' AND type='index'
+[0m
+
+
+Started GET "/apologizes" for 127.0.0.1 at 2016-07-24 09:36:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApologizesController#index as HTML
+  [1m[35mApologize Load (0.2ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered apologizes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 391ms (Views: 381.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/apologizes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:36:35 -0300
+
+
+Started GET "/assets/apologizes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:36:35 -0300
+
+
+Started GET "/apologizes" for 127.0.0.1 at 2016-07-24 09:37:52 -0300
+
+ActionController::RoutingError (No route matches [GET] "/apologizes"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.8ms)
+
+
+Started GET "/apologizes" for 127.0.0.1 at 2016-07-24 09:38:11 -0300
+
+ActionController::RoutingError (No route matches [GET] "/apologizes"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.9ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:38:32 -0300
+
+ActionController::RoutingError (uninitialized constant Admin::ApologizesController):
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:276:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:276:in `block in constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.3ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:38:52 -0300
+
+LoadError (Unable to autoload constant Admin::ApologizesController, expected /home/aluno125/Documentos/gerador_de_desculpas/app/controllers/admin/apologizes_controller.rb to define it):
+  activesupport (4.2.6) lib/active_support/dependencies.rb:495:in `load_missing_constant'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:276:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:276:in `block in constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.0ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:39:42 -0300
+Processing by Admin::ApologizesController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template admin/apologizes/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/aluno125/Documentos/gerador_de_desculpas/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (23.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.3ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:40:15 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[36mApologize Load (0.5ms)[0m  [1mSELECT "apologizes".* FROM "apologizes"[0m
+  Rendered admin/apologizes/index.html.erb within layouts/application (42.1ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined local variable or method `new_apologize_path' for #<#<Class:0x007f6de279abb0>:0x0055da87b284c0>
+Did you mean?  new_admin_apologize_path):
+    28: 
+    29: <br>
+    30: 
+    31: <%= link_to 'New Apologize', new_apologize_path %>
+  app/views/admin/apologizes/index.html.erb:31:in `_app_views_admin_apologizes_index_html_erb__3222269780163687356_47198533839400'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.1ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[35mApologize Load (0.2ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered admin/apologizes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/apologizes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/assets/apologizes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:40:59 -0300
+
+
+Started GET "/admin/apologizes/new" for 127.0.0.1 at 2016-07-24 09:41:01 -0300
+Processing by Admin::ApologizesController#new as HTML
+  Rendered admin/apologizes/_form.html.erb (28.1ms)
+  Rendered admin/apologizes/new.html.erb within layouts/application (29.3ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `apologizes_path' for #<#<Class:0x007f6de279abb0>:0x007f6de17fab60>):
+    1: <%= form_for(@apologize) do |f| %>
+    2:   <% if @apologize.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@apologize.errors.count, "error") %> prohibited this apologize from being saved:</h2>
+  app/views/admin/apologizes/_form.html.erb:1:in `_app_views_admin_apologizes__form_html_erb__4165632946580837986_70054955583620'
+  app/views/admin/apologizes/new.html.erb:3:in `_app_views_admin_apologizes_new_html_erb__293937464249915239_70054955670900'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.6ms)
+
+
+Started GET "/admin/apologizes/new" for 127.0.0.1 at 2016-07-24 09:41:43 -0300
+Processing by Admin::ApologizesController#new as HTML
+  Rendered admin/apologizes/_form.html.erb (15.9ms)
+  Rendered admin/apologizes/new.html.erb within layouts/application (52.2ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `apologizes_path' for #<#<Class:0x007f6de279abb0>:0x007f6de1f3df08>
+Did you mean?  @apologize):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Back', apologizes_path %>
+  app/views/admin/apologizes/new.html.erb:5:in `_app_views_admin_apologizes_new_html_erb__293937464249915239_70054955670900'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.7ms)
+
+
+Started GET "/admin/apologizes/new" for 127.0.0.1 at 2016-07-24 09:42:01 -0300
+Processing by Admin::ApologizesController#new as HTML
+  Rendered admin/apologizes/_form.html.erb (2.6ms)
+  Rendered admin/apologizes/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/apologizes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started GET "/assets/apologizes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:42:02 -0300
+
+
+Started POST "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:42:43 -0300
+Processing by Admin::ApologizesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R0BCLBbMZvPEtrnywea8xAnWAtNalVN2lZuB59CjpXho/ksf8lCa8pZTBSbRVCVclhSc4tTxgxkE5+hd+M0V/w==", "apologize"=>{"apologize_image"=>"haha", "description"=>"haha1", "person_id"=>"-1"}, "commit"=>"Create Apologize"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "apologizes" ("apologize_image", "description", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["apologize_image", "haha"], ["description", "haha1"], ["person_id", -1], ["created_at", "2016-07-24 12:42:43.783052"], ["updated_at", "2016-07-24 12:42:43.783052"]]
+  [1m[36m (113.9ms)[0m  [1mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 114.5ms)
+
+NoMethodError (undefined method `apologize_url' for #<Admin::ApologizesController:0x007f6de1361018>
+Did you mean?  apologize_params):
+  app/controllers/admin/apologizes_controller.rb:31:in `block (2 levels) in create'
+  app/controllers/admin/apologizes_controller.rb:29:in `create'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.1ms)
+
+
+Started POST "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:43:33 -0300
+Processing by Admin::ApologizesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R0BCLBbMZvPEtrnywea8xAnWAtNalVN2lZuB59CjpXho/ksf8lCa8pZTBSbRVCVclhSc4tTxgxkE5+hd+M0V/w==", "apologize"=>{"apologize_image"=>"haha", "description"=>"haha1", "person_id"=>"-1"}, "commit"=>"Create Apologize"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "apologizes" ("apologize_image", "description", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["apologize_image", "haha"], ["description", "haha1"], ["person_id", -1], ["created_at", "2016-07-24 12:43:33.901581"], ["updated_at", "2016-07-24 12:43:33.901581"]]
+  [1m[35m (58.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/apologizes/2
+Completed 302 Found in 70ms (ActiveRecord: 59.4ms)
+
+
+Started GET "/admin/apologizes/2" for 127.0.0.1 at 2016-07-24 09:43:33 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mApologize Load (0.2ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (30.5ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `edit_apologize_path' for #<#<Class:0x007f6de2c11400>:0x007f6de2c053a8>
+Did you mean?  edit_admin_apologize_path
+               admin_apologize_path
+               edit_admin_person_path
+               admin_apologizes_path):
+    15:   <%= @apologize.person_id %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_apologize_path(@apologize) %> |
+    19: <%= link_to 'Back', apologizes_path %>
+  app/views/admin/apologizes/show.html.erb:18:in `_app_views_admin_apologizes_show_html_erb___2278173606250341371_70054966206480'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.0ms)
+
+
+Started GET "/admin/apologizes/2" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mApologize Load (0.2ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/apologizes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/assets/apologizes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:44:45 -0300
+
+
+Started GET "/admin/apologizes/2/edit" for 127.0.0.1 at 2016-07-24 09:44:48 -0300
+Processing by Admin::ApologizesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered admin/apologizes/_form.html.erb (7.7ms)
+  Rendered admin/apologizes/edit.html.erb within layouts/application (40.3ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `apologize_path' for #<#<Class:0x007f6de2c11400>:0x007f6de25c1320>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Show', @apologize %> |
+    6: <%= link_to 'Back', apologizes_path %>
+  app/views/admin/apologizes/edit.html.erb:5:in `_app_views_admin_apologizes_edit_html_erb___3914816198093298556_70054962814920'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.5ms)
+
+
+Started GET "/admin/apologizes/2/edit" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+Processing by Admin::ApologizesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admin/apologizes/_form.html.erb (1.8ms)
+  Rendered admin/apologizes/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/apologizes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started GET "/assets/apologizes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:45:21 -0300
+
+
+Started PATCH "/admin/apologizes/2" for 127.0.0.1 at 2016-07-24 09:45:30 -0300
+Processing by Admin::ApologizesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E2Ch127t9NWH6CdUKx2VRJO9WO+HhJ8fU1K0wueV0IM83qjkinEI1NUNm4A7rwzcDH/G3gngT3DCLt14z/tgBA==", "apologize"=>{"apologize_image"=>"haha", "description"=>"haha1", "person_id"=>"-1"}, "commit"=>"Update Apologize", "id"=>"2"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `apologize_url' for #<Admin::ApologizesController:0x007f6de299fc80>
+Did you mean?  apologize_params):
+  app/controllers/admin/apologizes_controller.rb:45:in `block (2 levels) in update'
+  app/controllers/admin/apologizes_controller.rb:43:in `update'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.9ms)
+
+
+Started PATCH "/admin/apologizes/2" for 127.0.0.1 at 2016-07-24 09:46:25 -0300
+Processing by Admin::ApologizesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E2Ch127t9NWH6CdUKx2VRJO9WO+HhJ8fU1K0wueV0IM83qjkinEI1NUNm4A7rwzcDH/G3gngT3DCLt14z/tgBA==", "apologize"=>{"apologize_image"=>"haha", "description"=>"haha1", "person_id"=>"-1"}, "commit"=>"Update Apologize", "id"=>"2"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/apologizes/2
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/apologizes/2" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/apologizes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/assets/apologizes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:46:26 -0300
+
+
+Started GET "/admin/apologizes/2/edit" for 127.0.0.1 at 2016-07-24 09:46:28 -0300
+Processing by Admin::ApologizesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admin/apologizes/_form.html.erb (2.6ms)
+  Rendered admin/apologizes/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/admin/apologizes/2" for 127.0.0.1 at 2016-07-24 09:46:29 -0300
+Processing by Admin::ApologizesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oShnacxfTVNRQ3+pz4c7fGj/vZLhLecJwFDUUH2F4OWOlm5aKMOxUgOmw33fNaLk9z0jo29JN2ZRLL3qVetQYg==", "apologize"=>{"apologize_image"=>"haha", "description"=>"haha1", "person_id"=>"-1"}, "commit"=>"Update Apologize", "id"=>"2"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/apologizes/2
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/apologizes/2" for 127.0.0.1 at 2016-07-24 09:46:29 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:46:30 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[36mApologize Load (0.2ms)[0m  [1mSELECT "apologizes".* FROM "apologizes"[0m
+  Rendered admin/apologizes/index.html.erb within layouts/application (28.2ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `apologize_path' for #<#<Class:0x007f6de17f8860>:0x007f6de293b7a8>):
+    18:         <td><%= apologize.apologize_image %></td>
+    19:         <td><%= apologize.description %></td>
+    20:         <td><%= apologize.person_id %></td>
+    21:         <td><%= link_to 'Show', apologize %></td>
+    22:         <td><%= link_to 'Edit', edit_apologize_path(apologize) %></td>
+    23:         <td><%= link_to 'Destroy', apologize, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+  app/views/admin/apologizes/index.html.erb:21:in `block in _app_views_admin_apologizes_index_html_erb__3222269780163687356_70054961402180'
+  app/views/admin/apologizes/index.html.erb:16:in `_app_views_admin_apologizes_index_html_erb__3222269780163687356_70054961402180'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.1ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.7ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.3ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:47:00 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[35mApologize Load (0.2ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered admin/apologizes/index.html.erb within layouts/application (38.6ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `apologize_path' for #<#<Class:0x007f6de17f8860>:0x007f6de2e330d0>):
+    18:         <td><%= apologize.apologize_image %></td>
+    19:         <td><%= apologize.description %></td>
+    20:         <td><%= apologize.person_id %></td>
+    21:         <td><%= link_to 'Show', apologize %></td>
+    22:         <td><%= link_to 'Edit', edit_admin_apologize_path(apologize) %></td>
+    23:         <td><%= link_to 'Destroy', admin_apologize, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+  app/views/admin/apologizes/index.html.erb:21:in `block in _app_views_admin_apologizes_index_html_erb__3222269780163687356_70054967348880'
+  app/views/admin/apologizes/index.html.erb:16:in `_app_views_admin_apologizes_index_html_erb__3222269780163687356_70054967348880'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.3ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:47:36 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[36mApologize Load (0.2ms)[0m  [1mSELECT "apologizes".* FROM "apologizes"[0m
+  Rendered admin/apologizes/index.html.erb within layouts/application (37.2ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `admin_apologize' for #<#<Class:0x007f6de17f8860>:0x007f6de1c5ab38>
+Did you mean?  admin_apologize_url):
+    20:         <td><%= apologize.person_id %></td>
+    21:         <td><%= link_to 'Show', [:admin, apologize] %></td>
+    22:         <td><%= link_to 'Edit', edit_admin_apologize_path(apologize) %></td>
+    23:         <td><%= link_to 'Destroy', admin_apologize, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+    25:     <% end %>
+    26:   </tbody>
+  app/views/admin/apologizes/index.html.erb:23:in `block in _app_views_admin_apologizes_index_html_erb__3222269780163687356_70054957972800'
+  app/views/admin/apologizes/index.html.erb:16:in `_app_views_admin_apologizes_index_html_erb__3222269780163687356_70054957972800'
+
+
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.5ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.8ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/aluno125/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.7ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:48:08 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[35mApologize Load (0.2ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered admin/apologizes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/apologizes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:48:08 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:48:08 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:48:08 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:48:08 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:48:08 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:48:08 -0300
+
+
+Started GET "/assets/apologizes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:48:09 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:48:09 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:48:09 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:48:09 -0300
+
+
+Started GET "/admin/apologizes/1" for 127.0.0.1 at 2016-07-24 09:48:11 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/apologizes/1/edit" for 127.0.0.1 at 2016-07-24 09:48:13 -0300
+Processing by Admin::ApologizesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered admin/apologizes/_form.html.erb (3.0ms)
+  Rendered admin/apologizes/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/admin/apologizes/1" for 127.0.0.1 at 2016-07-24 09:48:16 -0300
+Processing by Admin::ApologizesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6dXzm/c+tphRhVz7FDsssq00AhtXHxiEWVzccREWcnTGa/qoE6JKmQNg4C8EibUqMvacKtl7yOvIILXLOXjC8w==", "apologize"=>{"apologize_image"=>"haha", "description"=>"haha11", "person_id"=>"-1"}, "commit"=>"Update Apologize", "id"=>"1"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "apologizes" SET "description" = ?, "updated_at" = ? WHERE "apologizes"."id" = ?[0m  [["description", "haha11"], ["updated_at", "2016-07-24 12:48:16.553354"], ["id", 1]]
+  [1m[35m (70.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/apologizes/1
+Completed 302 Found in 77ms (ActiveRecord: 71.4ms)
+
+
+Started GET "/admin/apologizes/1" for 127.0.0.1 at 2016-07-24 09:48:16 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApologize Load (0.2ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:48:18 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[35mApologize Load (0.2ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered admin/apologizes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/apologizes/2" for 127.0.0.1 at 2016-07-24 09:48:19 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:48:20 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[35mApologize Load (0.3ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered admin/apologizes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/admin/apologizes/1" for 127.0.0.1 at 2016-07-24 09:48:22 -0300
+Processing by Admin::ApologizesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oTbecm19VDX0wy1BR14B10M5ECrdR8ZELk/IPpe73quOiNdBieGoNKYmkZVX7JhP3PuOG1MjFiu/M6GEv9VuLA==", "id"=>"1"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "apologizes" WHERE "apologizes"."id" = ?[0m  [["id", 1]]
+  [1m[35m (79.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/apologizes
+Completed 302 Found in 84ms (ActiveRecord: 80.3ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:48:22 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[36mApologize Load (0.2ms)[0m  [1mSELECT "apologizes".* FROM "apologizes"[0m
+  Rendered admin/apologizes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admin/apologizes/2" for 127.0.0.1 at 2016-07-24 09:48:24 -0300
+Processing by Admin::ApologizesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dFWYI1E7pg4iOFCB7enFA/ZNuM0P9dXfr7LHnBz1vL5b65EQtadaD3Dd7FX9W1ybaY8m/IGRBbA+zq4mNJsMOQ==", "id"=>"2"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "apologizes" WHERE "apologizes"."id" = ?  [["id", 2]]
+  [1m[36m (56.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/apologizes
+Completed 302 Found in 60ms (ActiveRecord: 56.5ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:48:24 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[35mApologize Load (0.2ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered admin/apologizes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/apologizes/new" for 127.0.0.1 at 2016-07-24 09:48:26 -0300
+Processing by Admin::ApologizesController#new as HTML
+  Rendered admin/apologizes/_form.html.erb (2.6ms)
+  Rendered admin/apologizes/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:48:31 -0300
+Processing by Admin::ApologizesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AfRYI6NwTY4hOztNhFF4hKAM2nnskZ7/qLHcOZWJjwouSlEQR+yxj3Peh5mU4+EcP85ESGL1TpA5zbWDvec/jQ==", "apologize"=>{"apologize_image"=>"haha", "description"=>"", "person_id"=>""}, "commit"=>"Create Apologize"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "apologizes" ("apologize_image", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["apologize_image", "haha"], ["description", ""], ["created_at", "2016-07-24 12:48:31.235284"], ["updated_at", "2016-07-24 12:48:31.235284"]]
+  [1m[36m (164.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/apologizes/3
+Completed 302 Found in 168ms (ActiveRecord: 164.8ms)
+
+
+Started GET "/admin/apologizes/3" for 127.0.0.1 at 2016-07-24 09:48:31 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/apologizes/3/edit" for 127.0.0.1 at 2016-07-24 09:48:34 -0300
+Processing by Admin::ApologizesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered admin/apologizes/_form.html.erb (2.6ms)
+  Rendered admin/apologizes/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/admin/apologizes/3" for 127.0.0.1 at 2016-07-24 09:48:38 -0300
+Processing by Admin::ApologizesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cZuilWLq+2IW7IBBVwIwhOO9VtqQ4NzHkSJyDzYev09eJaumhnYHY0QJPJVHsKkcfH/I6x6EDKgAXhu1HnAPyA==", "apologize"=>{"apologize_image"=>"haha", "description"=>"11", "person_id"=>"4"}, "commit"=>"Update Apologize", "id"=>"3"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "apologizes" SET "description" = ?, "person_id" = ?, "updated_at" = ? WHERE "apologizes"."id" = ?  [["description", "11"], ["person_id", 4], ["updated_at", "2016-07-24 12:48:38.092193"], ["id", 3]]
+  [1m[36m (71.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/apologizes/3
+Completed 302 Found in 76ms (ActiveRecord: 72.0ms)
+
+
+Started GET "/admin/apologizes/3" for 127.0.0.1 at 2016-07-24 09:48:38 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mApologize Load (0.2ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:48:43 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[36mApologize Load (0.2ms)[0m  [1mSELECT "apologizes".* FROM "apologizes"[0m
+  Rendered admin/apologizes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[35mApologize Load (0.3ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered admin/apologizes/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/apologizes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/assets/scaffolds.self-a8b3243f33758baae53fa90ae70f2e18f3425c83c69115e0ef204031a149f776.css?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/assets/apologizes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-24 09:51:01 -0300
+
+
+Started GET "/admin/apologizes/3" for 127.0.0.1 at 2016-07-24 09:51:03 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApologize Load (0.3ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:51:04 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[35mApologize Load (0.2ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered admin/apologizes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/apologizes/3/edit" for 127.0.0.1 at 2016-07-24 09:51:06 -0300
+Processing by Admin::ApologizesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApologize Load (0.1ms)[0m  [1mSELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered admin/apologizes/_form.html.erb (2.5ms)
+  Rendered admin/apologizes/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/apologizes/3" for 127.0.0.1 at 2016-07-24 09:51:08 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mApologize Load (0.2ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:51:10 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[36mApologize Load (0.2ms)[0m  [1mSELECT "apologizes".* FROM "apologizes"[0m
+  Rendered admin/apologizes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admin/apologizes/3" for 127.0.0.1 at 2016-07-24 09:51:13 -0300
+Processing by Admin::ApologizesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K1CDmo7nInOYqaI2b26AE9f0XUVRurKG4m9AiBSH43kE7oqpanvecspMHuJ/3BmLSDbDdN/eYulzEykyPOlT/g==", "id"=>"3"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "apologizes" WHERE "apologizes"."id" = ?  [["id", 3]]
+  [1m[36m (49.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/apologizes
+Completed 302 Found in 52ms (ActiveRecord: 49.5ms)
+
+
+Started GET "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:51:13 -0300
+Processing by Admin::ApologizesController#index as HTML
+  [1m[35mApologize Load (0.2ms)[0m  SELECT "apologizes".* FROM "apologizes"
+  Rendered admin/apologizes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/apologizes/new" for 127.0.0.1 at 2016-07-24 09:51:14 -0300
+Processing by Admin::ApologizesController#new as HTML
+  Rendered admin/apologizes/_form.html.erb (2.3ms)
+  Rendered admin/apologizes/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/apologizes" for 127.0.0.1 at 2016-07-24 09:51:21 -0300
+Processing by Admin::ApologizesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nRylLh7mKPQJ+Md5DkN2LxBltWj0bmHvPCi4irI/HNSyoqwd+nrU9Vsde60e8e+3j6crWXoKsYCtVNEwmlGsUw==", "apologize"=>{"apologize_image"=>"asd", "description"=>"asdas", "person_id"=>"3"}, "commit"=>"Create Apologize"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "apologizes" ("apologize_image", "description", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["apologize_image", "asd"], ["description", "asdas"], ["person_id", 3], ["created_at", "2016-07-24 12:51:21.685154"], ["updated_at", "2016-07-24 12:51:21.685154"]]
+  [1m[36m (118.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/apologizes/4
+Completed 302 Found in 123ms (ActiveRecord: 119.2ms)
+
+
+Started GET "/admin/apologizes/4" for 127.0.0.1 at 2016-07-24 09:51:21 -0300
+Processing by Admin::ApologizesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mApologize Load (0.1ms)[0m  SELECT  "apologizes".* FROM "apologizes" WHERE "apologizes"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered admin/apologizes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms)

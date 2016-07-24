@@ -1,0 +1,29 @@
+<%= form_for [:admin, @apologize] do |f| %>
+  <% if @apologize.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apologize.errors.count, "error") %> prohibited this apologize from being saved:</h2>
+
+      <ul>
+      <% @apologize.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :apologize_image %><br>
+    <%= f.text_field :apologize_image %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :person_id %><br>
+    <%= f.number_field :person_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

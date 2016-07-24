@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Apologizes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Apologize image</th>
+      <th>Description</th>
+      <th>Person</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apologizes.each do |apologize| %>
+      <tr>
+        <td><%= apologize.apologize_image %></td>
+        <td><%= apologize.description %></td>
+        <td><%= apologize.person_id %></td>
+        <td><%= link_to 'Show', [:admin, apologize] %></td>
+        <td><%= link_to 'Edit', edit_admin_apologize_path(apologize) %></td>
+        <td><%= link_to 'Destroy', [:admin, apologize], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apologize', new_admin_apologize_path %>
