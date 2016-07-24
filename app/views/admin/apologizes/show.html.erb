@@ -2,7 +2,7 @@
 
 <p>
   <strong>Apologize image:</strong>
-  <%= @apologize.apologize_image %>
+  <%= image_tag(@apologize.apologize_image, size: "300x200") %>
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Person:</strong>
-  <%= @apologize.person_id %>
+  <%= @apologize.person.try(:name) %>
 </p>
 
 <%= link_to 'Edit', edit_admin_apologize_path(@apologize) %> |

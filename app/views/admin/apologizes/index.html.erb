@@ -15,7 +15,7 @@
   <tbody>
     <% @apologizes.each do |apologize| %>
       <tr>
-        <td><%= apologize.apologize_image %></td>
+        <td><%= image_tag(apologize.apologize_image, size: "200x150") %></td>
         <td><%= apologize.description %></td>
         <td><%= apologize.person.try(:name) %></td>
         <td><%= link_to 'Show', [:admin, apologize] %></td>
