@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+     root "home#index"
+     resources :home
 
      namespace :admin do
        resources :people
