@@ -1,3 +1,18 @@
-<%= @apologize.description %>
+  <div class="col-sm-offset-0">
+    <div class="col-sm-offset-5">
+      <h3> Gerador de Desculpas </h3>
+    </div>
+      <center>
+      <%= image_tag(@apologize.apologize_image, size: "600x500") %>
+      </center>
+      <center>
+        <div class="col-sm-4 col-sm-offset-4 jumbotron">
+          <%= @apologize.description %>
+        </div>
+    </center>
+    </div>
 
-<%= link_to "Refresh", home_index_path, method: :get %>
+    <div class="col-sm-offset-2 col-sm-8 ">
+      <%= link_to "Refresh", home_index_path, method: :get, class: "btn btn-danger btn-block"%>
+    </div>
+</div>
